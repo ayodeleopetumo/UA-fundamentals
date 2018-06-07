@@ -2,7 +2,9 @@
   "name": "demo-app",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
+    "mock:server":
+      "json-server --watch src/db.json --routes src/db-routes.json",
+    "start:proxy": "ng serve --proxy-config proxy.conf.json",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
@@ -21,6 +23,7 @@
     "@angular/platform-browser-dynamic": "^6.0.2",
     "@angular/router": "^6.0.2",
     "core-js": "^2.5.4",
+    "json-server": "^0.13.0",
     "rxjs": "^6.0.0",
     "zone.js": "^0.8.26"
   },

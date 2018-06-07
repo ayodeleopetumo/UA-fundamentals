@@ -1,0 +1,37 @@
+input[type='text'],
+input[type='email'],
+input[type='number'] {
+  border: none;
+  background: #fff;
+  font-size: 13px;
+  padding: 6px 30px 6px 10px;
+  border-radius: 1px;
+  box-shadow: 1px 1px 3px 1px #ccc;
+  border: 1px solid #eee;
+}
+
+button {
+  cursor: pointer;
+  background: #9f72e6;
+  border: 0;
+  border-radius: 2px;
+  padding: 5px 10px;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+form div {
+  margin-bottom: 10px;
+}
+
+form div:first-of-type {
+  margin-top: 10px;
+}

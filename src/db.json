@@ -1,0 +1,32 @@
+{
+  "passengers": [
+    {
+      "id": 1,
+      "fullName": "Stephen Sage",
+      "checkedIn": true,
+      "checkInDate": 1490742000000,
+      "baggage": "none"
+    },
+    {
+      "id": 2,
+      "fullName": "Tracy Owen",
+      "checkedIn": true,
+      "checkInDate": 1527287676000,
+      "baggage": ""
+    },
+    {
+      "id": 3,
+      "fullName": "Jerry McWaters",
+      "checkedIn": true,
+      "baggage": "hand-only",
+      "checkInDate": 1528238805326
+    },
+    {
+      "id": 4,
+      "fullName": "Quaker Oats",
+      "checkedIn": true,
+      "checkInDate": 1526855676000,
+      "baggage": ""
+    }
+  ]
+}

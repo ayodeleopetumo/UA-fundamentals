@@ -89,3 +89,23 @@ h4 {
   font-weight: 300;
   margin: 0;
 }
+
+/* ***************** */
+.nav {
+  margin: 0 0 10px;
+  padding: 0 0 20px;
+  border-bottom: 1px solid #dce5f2;
+}
+
+.nav a {
+  background: #3a4250;
+  color: #fff;
+  padding: 4px 10px;
+  margin: 0 2px;
+  border-radius: 3px;
+}
+
+.nav a.router-link-active {
+  color: #b690f1;
+  background: #363c48;
+}

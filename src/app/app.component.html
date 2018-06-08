@@ -1,3 +1,9 @@
 <section>
+  <nav class="nav">
+    <a *ngFor="let item of nav" [routerLink]="item.link" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: item.exact }">
+      {{ item.name }}
+    </a>
+  </nav>
+
   <router-outlet></router-outlet>
 </section>

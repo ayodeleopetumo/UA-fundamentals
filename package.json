@@ -2,7 +2,6 @@
   "name": "demo-app",
   "version": "0.0.0",
   "scripts": {
-    "mock:server": "json-server --watch src/db.json --routes src/db-routes.json",
     "start:proxy": "ng serve --proxy-config proxy.conf.json",
     "start:prod": "ng build --prod && lite-server --baseDir dist/DemoApp",
     "start": "ng serve",

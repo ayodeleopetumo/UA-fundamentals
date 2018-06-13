@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { environment } from '../../environments/environment';
 
 // Comtainers aka smart components
 import { PassengerViewerComponent } from './containers/passenger-viewer/passenger-viewer.component';
@@ -38,9 +41,10 @@ const routes: Routes = [
     CommonModule,
     HttpModule,
     FormsModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    AngularFireModule.initializeApp(environment.firebase, 'pwa-demo-43ffe'),
+    AngularFireDatabaseModule
   ],
-  // exports: [PassengerViewerComponent], commented out because routing was implemented
   providers: [PassengerDashboardService]
 })
 export class PassengerDashboardModule {}

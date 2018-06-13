@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute, Params } from '@angular/router';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 import { switchMap } from 'rxjs/operators';
 
-import { PassengerDashboardService } from '../../passenger-dashboard.service';
 import { Passenger } from '../../models/passenger.interface';
+import { PassengerDashboardService } from '../../passenger-dashboard.service';
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -29,10 +29,10 @@ export class PassengerViewerComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.route.params
+    this.route.paramMap
       .pipe(
-        switchMap((data: Passenger) =>
-          this.passengerService.getPassenger(data.id)
+        switchMap((params: ParamMap) =>
+          this.passengerService.getPassenger(params.get('id'))
         )
       )
       .subscribe((data: Passenger) => (this.passenger = data));
@@ -41,7 +41,7 @@ export class PassengerViewerComponent implements OnInit {
   onUpdatePassenger(event: Passenger) {
     this.passengerService
       .updatePassenger(event)
-      .subscribe(
+      .then(
         (data: Passenger) =>
           (this.passenger = Object.assign({}, this.passenger, event))
       );

@@ -4,6 +4,7 @@
   "scripts": {
     "start:proxy": "ng serve --proxy-config proxy.conf.json",
     "start:prod": "ng build --prod && lite-server --baseDir dist/DemoApp",
+    "deploy": "ng build --prod && firebase deploy",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
